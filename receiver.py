@@ -7,5 +7,9 @@ class Receiver:
         self.__p = __p
         self.__q = __q
 
-    def decrypt(self, encrypted):
+    def recv(self, encrypted, pubkey, coprime):
+        message = self.decrypt(encrypted, pubkey, coprime)
+        return message
+
+    def decrypt(self, encrypted, pubkey, coprime):
         pass
